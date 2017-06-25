@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Permission</div>
+                <div class="panel-body">
+					<!-- Permissions -->
+					<div class="col-lg-10 col-lg-offset-1">
+						<h1><i class="fa fa-key"></i> Permissions
+						<a href="" class="btn btn-default pull-right">Users</a>
+						<a href="" class="btn btn-default pull-right">Roles</a></h1>
+						<hr>
+						<div class="table-responsive">
+							<table class="table table-bordered table-striped">
+								<thead>
+									<tr>
+										<th>Permissions</th>
+										<th>Operation</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr *ngFor="let permission of permissions">
+										<td>{{permission.name}}</td>
+										<td>
+											<a href="" class="btn btn-info pull-left" style="margin-right: 3px;">Edit</a>
+										</td>
+									</tr>
+								</tbody>
+
+							</table>
+						</div>
+
+						<a href="" class="btn btn-success">Add Permission</a>
+					</div>
+					<!-- End Permissions -->
+				</div>
+            </div>
+        </div>
+    </div>
+</div>

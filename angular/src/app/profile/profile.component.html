@@ -1,0 +1,17 @@
+<div *ngIf="isUserSet">
+  <h2 class="page-header">{{user.name + " " + user.id}}</h2>
+  <ul class="list-group">
+    <li *ngIf="!editingName" class="list-group-item"><strong>Name:</strong> {{user.name}} <button class="btn btn-primary pull-right btn-xs" (click)="onEditName()">Edit</button></li>
+
+    <li *ngIf="editingName" class="list-group-item">
+      <div class="form-group">
+        <label for="name" class="control-label">Name :</label>
+        <input #inputName id="inputName" type="text" class="form-control" [(ngModel)]="editName" (focus)="onFocus($event)">
+      </div>
+      <button class="btn btn-primary btn-xs" (click)="onSaveName()"><strong>Save</strong></button>
+      <button class="btn btn-danger btn-xs" (click)="onCancelEditName()"><strong>Cancel</strong></button>
+    </li>
+
+    <li class="list-group-item"><strong>Email: </strong> {{ user.email}}</li>
+  </ul>
+</div>
